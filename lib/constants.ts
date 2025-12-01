@@ -1,0 +1,1 @@
+export const REDIRECT_STORAGE_KEY = 'invitation_redirect_url';
