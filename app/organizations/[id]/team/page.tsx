@@ -1,49 +1,13 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { useState } from "react";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu";
-import { 
-  Dialog, 
-  DialogContent, 
-  DialogDescription, 
-  DialogFooter, 
-  DialogHeader, 
-  DialogTitle, 
-  DialogTrigger 
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { toast } from "sonner";
-import { 
-  IconDotsVertical, 
-  IconMail, 
-  IconUserPlus, 
-  IconCalendar,
-  IconCrown,
-  IconUser,
-  IconTrash
-} from "@tabler/icons-react";
+import { useQuery } from "@tanstack/react-query";
 import { teamService } from "@/lib/services/team-services";
-import { getSession } from "@/lib/auth-client";
 import { AppSidebar } from "@/components/app-sidebar";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import { organizationService } from "@/lib/services/organization-services";
 import { ProtectedRoute } from "@/components/protected-route";
 import { TeamPageContent } from "@/components/TeamPageContent";
-
-
-
 
 function TeamPageWrapper() {
   const params = useParams();

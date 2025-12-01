@@ -1,8 +1,6 @@
-// components/app-sidebar.tsx
 "use client"
-
 import * as React from "react"
-import { useParams, usePathname, useRouter } from "next/navigation"
+import { useParams, usePathname} from "next/navigation"
 import {
   Bot,
   SquareTerminal,
@@ -26,13 +24,9 @@ interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
 }
 
 export function AppSidebar({ teamMembers = [], organizationId, ...props }: AppSidebarProps) {
-  const router = useRouter()
   const params = useParams()
   const pathname = usePathname()
-  
   const orgId = params.id as string
-
-  // Create navigation items with proper URLs and active state
   const navItems = [
     {
       title: "Table",
@@ -48,7 +42,6 @@ export function AppSidebar({ teamMembers = [], organizationId, ...props }: AppSi
     },
   ]
 
-  // Create teams data for TeamSwitcher
   const teamsData = [
     {
       name: `${organizationId || ""} Organization`,

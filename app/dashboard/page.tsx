@@ -4,14 +4,13 @@ import { useRouter } from "next/navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ProtectedRoute } from "@/components/protected-route";
-import { getSession, organization } from "@/lib/auth-client";
+import { getSession} from "@/lib/auth-client";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { organizationService } from "@/lib/services/organization-services";
 import { 
   DropdownMenu, 
   DropdownMenuContent, 
   DropdownMenuItem, 
-  DropdownMenuSeparator, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
 import { 
@@ -38,10 +37,8 @@ import { Organization } from "@/lib/types";
 
 function DeleteOrganizationDialog({ 
   organization, 
- 
 }: { 
   organization: Organization;
-
 }) {
   const [open, setOpen] = useState(false);
   const [confirmName, setConfirmName] = useState("");

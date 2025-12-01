@@ -1,6 +1,4 @@
-// components/protected-route.tsx
 "use client";
-
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getSession } from "@/lib/auth-client";
