@@ -85,10 +85,9 @@ function DeleteOrganizationDialog({
             <IconAlertTriangle className="h-5 w-5 text-destructive" />
             Delete Organization
           </DialogTitle>
-          <DialogDescription>
-            This action cannot be undone. This will permanently delete the organization 
-            <strong> "{organization.name}"</strong> and all associated data including outlines, team members, and settings.
-          </DialogDescription>
+        <DialogDescription>
+  This cannot be undone. All data for <strong>"{organization.name}"</strong> will be permanently deleted.
+</DialogDescription>
         </DialogHeader>
         <div className="space-y-4">
           <div className="space-y-2">

@@ -22,7 +22,7 @@ function JoinOrganizationContent({ inviteId }: { inviteId: string }) {
     if (!sessionLoading && !session?.data?.user) {
       const redirectUrl = `/join-organization/${inviteId}`;
       localStorage.setItem(REDIRECT_STORAGE_KEY, redirectUrl);
-      router.push(`/sign-up?redirect=${encodeURIComponent(redirectUrl)}`);
+      router.push(`/sign-in?redirect=${encodeURIComponent(redirectUrl)}`);
     }
   }, [session, sessionLoading, router, inviteId]);
 
